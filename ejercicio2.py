@@ -1,1 +1,5 @@
 n = int(input("Introduce un número: "))
+def fact(n):
+    if n < 1:
+        return 1
+    return n * fact(n-2)
