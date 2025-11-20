@@ -1,4 +1,6 @@
-def leibniz_pi(N: int) -> float:
+import math
+
+def leibniz_pi(N):
     suma = 0.0
     signo = 1.0
     for n in range(N):
@@ -7,11 +9,8 @@ def leibniz_pi(N: int) -> float:
     return 4.0 * suma
 
 if __name__ == "__main__":
-    N = 2_000_000
+    N = int(input("Introduce el número de iteraciones"))
     aproximacion = leibniz_pi(N)
-
-    import math
-
-    print(f"Iteraciones: {N}")
+    
     print(f"π (Leibniz): {aproximacion:.12f}")
     print(f"π (math.pi): {math.pi:.12f}")
